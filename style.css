@@ -38,6 +38,11 @@ h1 {
     border-radius: 5px;
     text-align: center;
 }
+.upper select {
+    border: 1px solid crimson;
+    border-radius: 5px;
+    width: 150px;
+}
 .lower {
     justify-content: center;
 }
@@ -50,12 +55,17 @@ h1 {
     border: 1px solid grey;
     border-radius: 5px;
 }
-/* animazione da aggiungere */
-
+.lower input:active {
+    background-color: grey;
+    border: purple;
+}
 
 .biglietto > .container {
     border-radius: 0;
-    padding: 10px;
+    padding: 20px;
+}
+.biglietto > h1 {
+    margin-bottom: 0;
 }
 table {
     width: 100%;
@@ -70,4 +80,10 @@ tbody tr:last-child td {
 }
 table td:first-child {
     background-color: grey;
+}
+td {
+    padding: 10px;
+}
+#nomePasseggero {
+    font-weight: bold;
 }
