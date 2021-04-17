@@ -22,10 +22,10 @@ h1 {
 }
 .flexbox {
     display: flex;
-}
-.upper {
     justify-content: center;
 }
+
+/* parte in alto */
 .field {
     padding: 30px;
 }
@@ -43,9 +43,6 @@ h1 {
     border-radius: 5px;
     width: 150px;
 }
-.lower {
-    justify-content: center;
-}
 .lower input {
     color: crimson;
     background-color: lightgrey;
@@ -60,6 +57,7 @@ h1 {
     border: purple;
 }
 
+/* parte in basso */
 .biglietto > .container {
     border-radius: 0;
     padding: 20px;

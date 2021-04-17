@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
 function onWindowLoad() {
     var myForm = document.getElementById("myForm");
 
+    // submit dei dati
     myForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -37,8 +38,18 @@ function onWindowLoad() {
         }
         
     })
+
+    // reset dei dati precedentemente inseriti nel biglietto
+    myForm.addEventListener("reset", function(event) {
+        document.getElementById("nomePasseggero").innerHTML = "";
+        document.getElementById("etaPasseggero").innerHTML = "";
+        document.getElementById("costoBiglietto").innerHTML = "";
+        document.getElementById("carrozza").innerHTML = "";
+        document.getElementById("codiceCP").innerHTML = "";
+    })
 }
 
+// calcolatore della tariffa in base ai kilometers da percorrere e dalla age del passeggero
 function costCalc(kilometers, age) {
     var fee = (kilometers * 0.21);
     if (age == "minor") {
@@ -53,6 +64,7 @@ function costCalc(kilometers, age) {
     return cost;
 }
 
+// generatore di un numero casuale da num1 a num2
 function randomGenerator(num1, num2) {
     return (Math.floor(Math.random() * (num2 - num1)) + num1);
 }
